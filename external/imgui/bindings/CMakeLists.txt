@@ -6,8 +6,7 @@ project(nanobind_example VERSION 1.0 LANGUAGES CXX)
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(IMGUI_DEFINE_MATH_OPERATORS TRUE)
-
+set(VERSION v1.91.5)
 
 # Find Python
 find_package(Python REQUIRED COMPONENTS Interpreter Development)
@@ -41,7 +40,7 @@ set_target_properties(imgui PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
 
 # Define the target for the Python module
-nanobind_add_module(example module.cpp pybind_imgui.cpp pybind_imgui_internal.cpp ../imgui_pywrappers/imgui_internal_pywrappers.cpp  ../imgui_pywrappers/imgui_pywrappers.cpp)
-target_include_directories(example PUBLIC ../imgui_pywrappers)
-target_link_libraries(example PUBLIC imgui)
+nanobind_add_module(pyimgui module.cpp pybind_imgui.cpp pybind_imgui_internal.cpp ../imgui_pywrappers/imgui_internal_pywrappers.cpp  ../imgui_pywrappers/imgui_pywrappers.cpp)
+target_include_directories(pyimgui PUBLIC ../imgui_pywrappers)
+target_link_libraries(pyimgui PUBLIC imgui)
 
