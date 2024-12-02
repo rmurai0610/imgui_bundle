@@ -4134,7 +4134,7 @@ void py_init_module_imgui_internal(nb::module_& m)
         {
             auto BeginTableEx_adapt_mutable_param_with_default_value = [](const char * name, ImGuiID id, int columns_count, ImGuiTableFlags flags = 0, const std::optional<const ImVec2> & outer_size = std::nullopt, float inner_width = 0.0f) -> bool
             {
-
+    
                 const ImVec2& outer_size_or_default = [&]() -> const ImVec2 {
                     if (outer_size.has_value())
                         return outer_size.value();
@@ -4401,7 +4401,7 @@ void py_init_module_imgui_internal(nb::module_& m)
         {
             auto RenderTextClipped_adapt_mutable_param_with_default_value = [](const ImVec2 & pos_min, const ImVec2 & pos_max, const char * text, const char * text_end, const ImVec2 * text_size_if_known, const std::optional<const ImVec2> & align = std::nullopt, const ImRect * clip_rect = NULL)
             {
-
+    
                 const ImVec2& align_or_default = [&]() -> const ImVec2 {
                     if (align.has_value())
                         return align.value();
@@ -4422,7 +4422,7 @@ void py_init_module_imgui_internal(nb::module_& m)
         {
             auto RenderTextClippedEx_adapt_mutable_param_with_default_value = [](ImDrawList * draw_list, const ImVec2 & pos_min, const ImVec2 & pos_max, const char * text, const char * text_end, const ImVec2 * text_size_if_known, const std::optional<const ImVec2> & align = std::nullopt, const ImRect * clip_rect = NULL)
             {
-
+    
                 const ImVec2& align_or_default = [&]() -> const ImVec2 {
                     if (align.has_value())
                         return align.value();
@@ -4519,7 +4519,7 @@ void py_init_module_imgui_internal(nb::module_& m)
         {
             auto ButtonEx_adapt_mutable_param_with_default_value = [](const char * label, const std::optional<const ImVec2> & size_arg = std::nullopt, ImGuiButtonFlags flags = 0) -> bool
             {
-
+    
                 const ImVec2& size_arg_or_default = [&]() -> const ImVec2 {
                     if (size_arg.has_value())
                         return size_arg.value();

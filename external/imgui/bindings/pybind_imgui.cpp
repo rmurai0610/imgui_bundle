@@ -319,7 +319,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto BeginChild_adapt_mutable_param_with_default_value = [](const char * str_id, const std::optional<const ImVec2> & size = std::nullopt, ImGuiChildFlags child_flags = 0, ImGuiWindowFlags window_flags = 0) -> bool
             {
-
+    
                 const ImVec2& size_or_default = [&]() -> const ImVec2 {
                     if (size.has_value())
                         return size.value();
@@ -341,7 +341,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto BeginChild_adapt_mutable_param_with_default_value = [](ImGuiID id, const std::optional<const ImVec2> & size = std::nullopt, ImGuiChildFlags child_flags = 0, ImGuiWindowFlags window_flags = 0) -> bool
             {
-
+    
                 const ImVec2& size_or_default = [&]() -> const ImVec2 {
                     if (size.has_value())
                         return size.value();
@@ -407,7 +407,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto SetNextWindowPos_adapt_mutable_param_with_default_value = [](const ImVec2 & pos, ImGuiCond cond = 0, const std::optional<const ImVec2> & pivot = std::nullopt)
             {
-
+    
                 const ImVec2& pivot_or_default = [&]() -> const ImVec2 {
                     if (pivot.has_value())
                         return pivot.value();
@@ -882,7 +882,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto Button_adapt_mutable_param_with_default_value = [](const char * label, const std::optional<const ImVec2> & size = std::nullopt) -> bool
             {
-
+    
                 const ImVec2& size_or_default = [&]() -> const ImVec2 {
                     if (size.has_value())
                         return size.value();
@@ -982,7 +982,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto ProgressBar_adapt_mutable_param_with_default_value = [](float fraction, const std::optional<const ImVec2> & size_arg = std::nullopt, const char * overlay = NULL)
             {
-
+    
                 const ImVec2& size_arg_or_default = [&]() -> const ImVec2 {
                     if (size_arg.has_value())
                         return size_arg.value();
@@ -1036,7 +1036,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto Image_adapt_mutable_param_with_default_value = [](ImTextureID user_texture_id, const ImVec2 & image_size, const std::optional<const ImVec2> & uv0 = std::nullopt, const std::optional<const ImVec2> & uv1 = std::nullopt, const std::optional<const ImVec4> & tint_col = std::nullopt, const std::optional<const ImVec4> & border_col = std::nullopt)
             {
-
+    
                 const ImVec2& uv0_or_default = [&]() -> const ImVec2 {
                     if (uv0.has_value())
                         return uv0.value();
@@ -1078,7 +1078,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto ImageButton_adapt_mutable_param_with_default_value = [](const char * str_id, ImTextureID user_texture_id, const ImVec2 & image_size, const std::optional<const ImVec2> & uv0 = std::nullopt, const std::optional<const ImVec2> & uv1 = std::nullopt, const std::optional<const ImVec4> & bg_col = std::nullopt, const std::optional<const ImVec4> & tint_col = std::nullopt) -> bool
             {
-
+    
                 const ImVec2& uv0_or_default = [&]() -> const ImVec2 {
                     if (uv0.has_value())
                         return uv0.value();
@@ -1775,7 +1775,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto ColorButton_adapt_mutable_param_with_default_value = [](const char * desc_id, const ImVec4 & col, ImGuiColorEditFlags flags = 0, const std::optional<const ImVec2> & size = std::nullopt) -> bool
             {
-
+    
                 const ImVec2& size_or_default = [&]() -> const ImVec2 {
                     if (size.has_value())
                         return size.value();
@@ -1905,7 +1905,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto Selectable_adapt_mutable_param_with_default_value = [](const char * label, bool * p_selected, ImGuiSelectableFlags flags = 0, const std::optional<const ImVec2> & size = std::nullopt) -> bool
             {
-
+    
                 const ImVec2& size_or_default = [&]() -> const ImVec2 {
                     if (size.has_value())
                         return size.value();
@@ -1948,7 +1948,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto BeginListBox_adapt_mutable_param_with_default_value = [](const char * label, const std::optional<const ImVec2> & size = std::nullopt) -> bool
             {
-
+    
                 const ImVec2& size_or_default = [&]() -> const ImVec2 {
                     if (size.has_value())
                         return size.value();
@@ -2030,7 +2030,7 @@ void py_init_module_imgui_main(nb::module_& m)
             };
             auto PlotLines_adapt_mutable_param_with_default_value = [&PlotLines_adapt_c_buffers](const char * label, const nb::ndarray<> & values, int values_offset = 0, const char * overlay_text = NULL, float scale_min = FLT_MAX, float scale_max = FLT_MAX, const std::optional<const ImVec2> & graph_size = std::nullopt, int stride = -1)
             {
-
+    
                 const ImVec2& graph_size_or_default = [&]() -> const ImVec2 {
                     if (graph_size.has_value())
                         return graph_size.value();
@@ -2091,7 +2091,7 @@ void py_init_module_imgui_main(nb::module_& m)
             };
             auto PlotHistogram_adapt_mutable_param_with_default_value = [&PlotHistogram_adapt_c_buffers](const char * label, const nb::ndarray<> & values, int values_offset = 0, const char * overlay_text = NULL, float scale_min = FLT_MAX, float scale_max = FLT_MAX, const std::optional<const ImVec2> & graph_size = std::nullopt, int stride = -1)
             {
-
+    
                 const ImVec2& graph_size_or_default = [&]() -> const ImVec2 {
                     if (graph_size.has_value())
                         return graph_size.value();
@@ -2352,7 +2352,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto BeginTable_adapt_mutable_param_with_default_value = [](const char * str_id, int columns, ImGuiTableFlags flags = 0, const std::optional<const ImVec2> & outer_size = std::nullopt, float inner_width = 0.0f) -> bool
             {
-
+    
                 const ImVec2& outer_size_or_default = [&]() -> const ImVec2 {
                     if (outer_size.has_value())
                         return outer_size.value();
@@ -2535,7 +2535,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto DockSpace_adapt_mutable_param_with_default_value = [](ImGuiID dockspace_id, const std::optional<const ImVec2> & size = std::nullopt, ImGuiDockNodeFlags flags = 0, const ImGuiWindowClass * window_class = NULL) -> ImGuiID
             {
-
+    
                 const ImVec2& size_or_default = [&]() -> const ImVec2 {
                     if (size.has_value())
                         return size.value();
@@ -6915,7 +6915,7 @@ void py_init_module_imgui_main(nb::module_& m)
             {
                 auto AddImage_adapt_mutable_param_with_default_value = [&self](ImTextureID user_texture_id, const ImVec2 & p_min, const ImVec2 & p_max, const std::optional<const ImVec2> & uv_min = std::nullopt, const std::optional<const ImVec2> & uv_max = std::nullopt, ImU32 col = IM_COL32_WHITE)
                 {
-
+    
                     const ImVec2& uv_min_or_default = [&]() -> const ImVec2 {
                         if (uv_min.has_value())
                             return uv_min.value();
@@ -6942,7 +6942,7 @@ void py_init_module_imgui_main(nb::module_& m)
             {
                 auto AddImageQuad_adapt_mutable_param_with_default_value = [&self](ImTextureID user_texture_id, const ImVec2 & p1, const ImVec2 & p2, const ImVec2 & p3, const ImVec2 & p4, const std::optional<const ImVec2> & uv1 = std::nullopt, const std::optional<const ImVec2> & uv2 = std::nullopt, const std::optional<const ImVec2> & uv3 = std::nullopt, const std::optional<const ImVec2> & uv4 = std::nullopt, ImU32 col = IM_COL32_WHITE)
                 {
-
+    
                     const ImVec2& uv1_or_default = [&]() -> const ImVec2 {
                         if (uv1.has_value())
                             return uv1.value();
@@ -7308,7 +7308,7 @@ void py_init_module_imgui_main(nb::module_& m)
             {
                 auto AddCustomRectFontGlyph_adapt_mutable_param_with_default_value = [&self](ImFont * font, ImWchar id, int width, int height, float advance_x, const std::optional<const ImVec2> & offset = std::nullopt) -> int
                 {
-
+    
                     const ImVec2& offset_or_default = [&]() -> const ImVec2 {
                         if (offset.has_value())
                             return offset.value();
@@ -7527,7 +7527,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto BeginHorizontal_adapt_mutable_param_with_default_value = [](const char * str_id, const std::optional<const ImVec2> & size = std::nullopt, float align = -1.0f)
             {
-
+    
                 const ImVec2& size_or_default = [&]() -> const ImVec2 {
                     if (size.has_value())
                         return size.value();
@@ -7548,7 +7548,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto BeginHorizontal_adapt_mutable_param_with_default_value = [](const void * ptr_id, const std::optional<const ImVec2> & size = std::nullopt, float align = -1.0f)
             {
-
+    
                 const ImVec2& size_or_default = [&]() -> const ImVec2 {
                     if (size.has_value())
                         return size.value();
@@ -7569,7 +7569,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto BeginHorizontal_adapt_mutable_param_with_default_value = [](int id, const std::optional<const ImVec2> & size = std::nullopt, float align = -1)
             {
-
+    
                 const ImVec2& size_or_default = [&]() -> const ImVec2 {
                     if (size.has_value())
                         return size.value();
@@ -7593,7 +7593,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto BeginVertical_adapt_mutable_param_with_default_value = [](const char * str_id, const std::optional<const ImVec2> & size = std::nullopt, float align = -1.0f)
             {
-
+    
                 const ImVec2& size_or_default = [&]() -> const ImVec2 {
                     if (size.has_value())
                         return size.value();
@@ -7614,7 +7614,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto BeginVertical_adapt_mutable_param_with_default_value = [](const void * ptr_id, const std::optional<const ImVec2> & size = std::nullopt, float align = -1.0f)
             {
-
+    
                 const ImVec2& size_or_default = [&]() -> const ImVec2 {
                     if (size.has_value())
                         return size.value();
@@ -7635,7 +7635,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto BeginVertical_adapt_mutable_param_with_default_value = [](int id, const std::optional<const ImVec2> & size = std::nullopt, float align = -1)
             {
-
+    
                 const ImVec2& size_or_default = [&]() -> const ImVec2 {
                     if (size.has_value())
                         return size.value();
@@ -7693,7 +7693,7 @@ void py_init_module_imgui_main(nb::module_& m)
         {
             auto InputTextMultiline_adapt_mutable_param_with_default_value = [](const char * label, std::string * str, const std::optional<const ImVec2> & size = std::nullopt, ImGuiInputTextFlags flags = 0, ImGuiInputTextCallback callback = nullptr, void * user_data = nullptr) -> bool
             {
-
+    
                 const ImVec2& size_or_default = [&]() -> const ImVec2 {
                     if (size.has_value())
                         return size.value();

@@ -965,7 +965,7 @@ void py_init_module_imgui_test_engine(nb::module_& m)
             {
                 auto WindowMove_adapt_mutable_param_with_default_value = [&self](ImGuiTestRef window_ref, ImVec2 pos, const std::optional<const ImVec2> & pivot = std::nullopt, ImGuiTestOpFlags flags = ImGuiTestOpFlags_None)
                 {
-
+    
                     const ImVec2& pivot_or_default = [&]() -> const ImVec2 {
                         if (pivot.has_value())
                             return pivot.value();
@@ -1455,7 +1455,7 @@ void py_init_module_imgui_test_engine(nb::module_& m)
             {
                 auto DockInto_adapt_mutable_param_with_default_value = [&self](ImGuiTestRef src_id, ImGuiTestRef dst_id, const std::optional<const ImGuiDir> & split_dir = std::nullopt, bool is_outer_docking = false, ImGuiTestOpFlags flags = 0)
                 {
-
+    
                     const ImGuiDir& split_dir_or_default = [&]() -> const ImGuiDir {
                         if (split_dir.has_value())
                             return split_dir.value();

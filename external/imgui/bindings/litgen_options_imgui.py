@@ -192,9 +192,18 @@ def litgen_options_imgui(
 
     def is_immutable_cpp_type(cpp_type: str) -> bool:
         if cpp_type in [
-            "ImGuiDataType_", "ImGuiKey",  # enums
-            "ImGuiID", "ImS8", "ImU8", "ImS16", "ImU16", "ImS32", "ImU32", "ImS64", "ImU64",  # Scalar types
-            "IM_COL32"  # a function that returns a color (ImU32)
+            "ImGuiDataType_",
+            "ImGuiKey",  # enums
+            "ImGuiID",
+            "ImS8",
+            "ImU8",
+            "ImS16",
+            "ImU16",
+            "ImS32",
+            "ImU32",
+            "ImS64",
+            "ImU64",  # Scalar types
+            "IM_COL32",  # a function that returns a color (ImU32)
         ]:
             return True
         if cpp_type.endswith("Flags"):
@@ -205,9 +214,18 @@ def litgen_options_imgui(
 
     def is_immutable_cpp_type(cpp_type: str) -> bool:
         if cpp_type in [
-            "ImGuiDataType_", "ImGuiKey",  # enums
-            "ImGuiID", "ImS8", "ImU8", "ImS16", "ImU16", "ImS32", "ImU32", "ImS64", "ImU64",  # Scalar types
-            "IM_COL32"  # a function that returns a color (ImU32)
+            "ImGuiDataType_",
+            "ImGuiKey",  # enums
+            "ImGuiID",
+            "ImS8",
+            "ImU8",
+            "ImS16",
+            "ImU16",
+            "ImS32",
+            "ImU32",
+            "ImS64",
+            "ImU64",  # Scalar types
+            "IM_COL32",  # a function that returns a color (ImU32)
         ]:
             return True
         if cpp_type.endswith("Flags"):
@@ -216,7 +234,9 @@ def litgen_options_imgui(
 
     options.fn_params_adapt_mutable_param_with_default_value__fn_is_known_immutable_type = is_immutable_cpp_type
 
-    options.fn_params_type_replacements.add_replacements([(r"\bImVec2\b", "ImVec2Like"), (r"\bImVec4\b", "ImVec4Like")])
+    options.fn_params_type_replacements.add_replacements(
+        [(r"\bImVec2\b", "ImVec2Like"), (r"\bImVec4\b", "ImVec4Like")]
+    )
 
     options.srcmlcpp_options.ignored_warnings = [
         WarningType.LitgenClassMemberSkipBitfield,
@@ -385,9 +405,11 @@ def litgen_options_imgui(
         ]
     )
 
-    options.member_readonly_by_type__regex = join_string_by_pipe_char([
-        r"^char\s*\*",
-    ])
+    options.member_readonly_by_type__regex = join_string_by_pipe_char(
+        [
+            r"^char\s*\*",
+        ]
+    )
 
     options.class_exclude_by_name__regex = join_string_by_pipe_char([])
 
@@ -426,11 +448,18 @@ def litgen_options_imgui(
             r"^AddConcavePolyFilled",
             r"^ColorPicker4",
             r"^Shortcut",
-            r"^SetItemKeyOwner"
+            r"^SetItemKeyOwner",
         ]
     )
     options.fn_force_lambda__regex = join_string_by_pipe_char(
-        ["^ImMin$", "^ImMax$", "^ImClamp$", "^ImLerp$", "^Contains$", "^DockBuilderSplitNode"]
+        [
+            "^ImMin$",
+            "^ImMax$",
+            "^ImClamp$",
+            "^ImLerp$",
+            "^Contains$",
+            "^DockBuilderSplitNode",
+        ]
     )
 
     options.fn_return_force_policy_reference_for_pointers__regex = r".*"
@@ -475,8 +504,9 @@ def litgen_options_imgui(
         )
         # Replace ImVector[int] by ImVector_int, etc.
         import re
-        pattern = r'\bImVector\s*\[\s*(.*?)\s*\]'
-        replacement = r'ImVector_\1'
+
+        pattern = r"\bImVector\s*\[\s*(.*?)\s*\]"
+        replacement = r"ImVector_\1"
         stub_code = re.sub(pattern, replacement, stub_code)
 
         return stub_code
