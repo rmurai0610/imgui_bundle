@@ -6,7 +6,7 @@ project(nanobind_example VERSION 1.0 LANGUAGES CXX)
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(VERSION v1.91.5)
+set(VERSION_INFO v1.91.5)
 
 # Find Python
 find_package(Python REQUIRED COMPONENTS Interpreter Development)
