@@ -14,7 +14,7 @@ void py_init_module_imgui_internal(nb::module_& m);
 
 // This builds the native python module `_imgui_bundle`
 // it will be wrapped in a standard python module `imgui_bundle`
-NB_MODULE(pyimgui, m) {
+NB_MODULE(pyimgui_ext, m) {
     #ifdef VERSION_INFO
     m.attr("__version__") = MACRO_STRINGIFY(VERSION_INFO);
     #else
@@ -23,5 +23,4 @@ NB_MODULE(pyimgui, m) {
     py_init_module_imgui_main(m);
     auto module_imgui_internal =  m.def_submodule("internal");
     py_init_module_imgui_internal(module_imgui_internal);
-
 }

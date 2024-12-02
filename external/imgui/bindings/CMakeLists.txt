@@ -1,8 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
 
-# Project name and version
-project(nanobind_example VERSION 1.0 LANGUAGES CXX)
-
 # Set C++ standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -40,7 +37,15 @@ set_target_properties(imgui PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
 
 # Define the target for the Python module
-nanobind_add_module(pyimgui module.cpp pybind_imgui.cpp pybind_imgui_internal.cpp ../imgui_pywrappers/imgui_internal_pywrappers.cpp  ../imgui_pywrappers/imgui_pywrappers.cpp)
-target_include_directories(pyimgui PUBLIC ../imgui_pywrappers)
-target_link_libraries(pyimgui PUBLIC imgui)
+nanobind_add_module(_pyimgui
+    STABLE_ABI
+    src/module.cpp 
+    src/pybind_imgui.cpp 
+    src/pybind_imgui_internal.cpp 
+    ../imgui_pywrappers/imgui_internal_pywrappers.cpp  
+    ../imgui_pywrappers/imgui_pywrappers.cpp)
+target_include_directories(_pyimgui PUBLIC ../imgui_pywrappers)
+target_link_libraries(_pyimgui PUBLIC imgui)
+
+install(TARGETS _pyimgui LIBRARY DESTINATION pyimgui)
 
