@@ -1,4 +1,4 @@
 [submodule "external/imgui/imgui"]
 	path = external/imgui/imgui
-	url = https://github.com/pthom/imgui.git
+	url = https://github.com/pthom/imgui
 	branch = imgui_bundle
