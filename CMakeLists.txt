@@ -32,7 +32,7 @@ SET(IMGUI_SOURCES
 add_library(imgui STATIC ${IMGUI_SOURCES})
 target_include_directories(imgui PUBLIC external/imgui/imgui ${FREETYPE_INCLUDE_DIRS})
 target_link_libraries(imgui PUBLIC Freetype::Freetype)
-target_compile_definitions(imgui PUBLIC IMGUI_BUNDLE_PYTHON_API)
+target_compile_definitions(imgui PUBLIC IMGUI_BUNDLE_PYTHON_API IMGUI_USER_CONFIG="${CMAKE_CURRENT_LIST_DIR}/imgui_bundle_config.h")
 set_target_properties(imgui PROPERTIES POSITION_INDEPENDENT_CODE ON)
 
 
